@@ -1,0 +1,327 @@
+/* ===================================== */
+/* GLOBAL RESET & BACKGROUND UTAMA       */
+/* ===================================== */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #3D3D3D;
+    text-align: center;
+    scroll-behavior: smooth; 
+    line-height: 1.6; 
+    
+    /* BACKGROUND PANTAI TETAP */
+    background-image: url('/images/bacground.png'); 
+    background-attachment: fixed; 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif; 
+    font-weight: 700;
+    color: #8C785B; 
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+h5 { 
+    margin: 5px 0 10px 0; 
+    font-size: 1.1em;
+    color: #A08C69; 
+}
+
+a {
+    color: #A08C69;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* ===================================== */
+/* COVER PAGE */
+/* ===================================== */
+.cover-page {
+    position: fixed; 
+    top: 0; left: 0; width: 100%; height: 100%;
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+    z-index: 1000; 
+    transition: opacity 1s ease; 
+    color: white; 
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.7); 
+}
+.cover-page::before {
+    content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); 
+    z-index: -1; 
+}
+.cover-page h1 { color: white; text-shadow: 2px 2px 5px rgba(0,0,0,0.8); }
+
+/* GAYA SAMPUL KHUSUS (3 Baris Universal) */
+.guest-container { 
+    background: rgba(255, 255, 255, 0.4); 
+    backdrop-filter: blur(5px); 
+    border: 1px solid rgba(255, 255, 255, 0.6); 
+    color: #3D3D3D; 
+    padding: 20px 30px; 
+    margin: 30px 20px 50px 20px;
+    border-radius: 12px;
+}
+.formal-title {
+    font-size: 0.9em;
+    font-weight: 400;
+    margin: 0;
+    color: #3D3D3D; 
+}
+.invitation-phrase {
+    font-size: 1em;
+    font-weight: 300;
+    margin: 0;
+    color: #3D3D3D;
+}
+#guest-name-display { 
+    font-size: 2.5em; 
+    font-weight: 700;
+    margin: 5px 0 10px 0; 
+    color: #3D3D3D;
+    text-shadow: none; 
+    font-family: 'Playfair Display', serif; 
+    max-width: 100%;
+    overflow-wrap: break-word;
+}
+#open-invitation-btn {
+    padding: 12px 25px;
+    background-color: #8B0000;
+    color: white;
+    border: 2px solid #A08C69;
+    border-radius: 50px;
+    font-size: 1em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+
+/* ===================================== */
+/* MAIN CONTENT SECTIONS (UMUM) */
+/* ===================================== */
+.main-content {
+    padding-top: 40px; 
+    padding-bottom: 70px; 
+}
+.hidden { display: none; }
+
+.section {
+    padding: 60px 20px;
+    max-width: 800px;
+    margin: 20px auto; 
+    background-color: rgba(255, 255, 255, 0.88); 
+    backdrop-filter: blur(2px); 
+    border-radius: 10px; 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); 
+}
+.footer {
+    background-color: rgba(234, 227, 210, 0.88); 
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border-radius: 10px;
+}
+hr {
+    border: none;
+    height: 1px;
+    background-color: #E8DAB7; 
+    width: 80%;
+    max-width: 400px;
+    margin: 40px auto; 
+}
+
+/* --- COUPLE INFO (Perbaikan Kerapian) --- */
+.couple-info {
+    display: flex;
+    justify-content: space-around;
+    align-items: center; 
+    flex-wrap: wrap; 
+    margin-top: 30px;
+}
+.groom, .bride {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    width: 45%; 
+    max-width: 250px;
+    padding: 10px;
+}
+.couple-icon {
+    width: 35px; height: 35px; margin-bottom: 5px; margin-top: 20px; 
+    stroke: #A08C69; fill: none; 
+}
+.couple-photo {
+    width: 150px; height: 150px; object-fit: cover; border-radius: 50%;
+    border: 3px solid rgba(255, 255, 255, 0.8); 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    margin-bottom: 15px;
+}
+.ampersand {
+    font-family: 'Playfair Display', serif; font-size: 3em; color: #A08C69; margin: 0 15px; 
+}
+
+/* --- COUNTDOWN --- */
+#timer {
+    display: flex; justify-content: center; gap: 15px; margin-top: 30px; padding: 10px; flex-wrap: wrap; 
+}
+.time-box {
+    background-color: #A08C69; color: white; padding: 15px 15px; border-radius: 8px;
+    min-width: 70px; font-size: 0.9em; box-shadow: 0 4px 10px rgba(0,0,0,0.1); font-weight: 500;
+}
+.time-box span {
+    display: block; font-size: 2.2em; font-weight: 700; font-family: 'Playfair Display', serif; line-height: 1; 
+}
+
+/* --- GALERI (Geser Horizontal) --- */
+.gallery-grid {
+    display: flex; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; -ms-overflow-style: none;
+    margin-top: 30px; padding: 10px 0; gap: 15px; scroll-snap-type: x mandatory;
+}
+.gallery-grid::-webkit-scrollbar { display: none; }
+.gallery-item {
+    min-width: 280px; height: 350px; object-fit: cover; border-radius: 5px; cursor: grab; 
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2); scroll-snap-align: start;
+}
+
+/* --- EVENT DETAILS --- */
+.event-box {
+    background-color: white; padding: 25px; border-radius: 10px; margin-bottom: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); border-left: 5px solid #8B0000;
+}
+.map-btn {
+    display: inline-block; padding: 10px 20px; background-color: #8B0000; color: white;
+    border-radius: 5px; margin-top: 15px; transition: background-color 0.3s;
+}
+
+
+/* ===================================== */
+/* RSVP FORM STYLING (FINAL) */
+/* ===================================== */
+#rsvp-form {
+    max-width: 450px; margin: 20px auto; text-align: left; padding: 30px; /* Padding ditingkatkan */
+    border: 1px solid #E8DAB7; border-radius: 12px; background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.form-group { margin-bottom: 25px; }
+.form-group label {
+    display: block; margin-bottom: 8px; font-weight: 600; color: #5D4037; font-size: 1.1em;
+}
+/* KUNCI: Input, Select, dan Textarea seragam dan besar */
+.form-group input[type="text"], 
+.form-group select, 
+.form-group textarea {
+    width: 100%; padding: 14px 12px; /* Padding besar */
+    border: 1px solid #ccc; border-radius: 10px; 
+    box-sizing: border-box; font-size: 1.05em; 
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+.form-group input[type="text"]:focus, .form-group select:focus, .form-group textarea:focus {
+    border-color: #A08C69; box-shadow: 0 0 5px rgba(160, 140, 105, 0.5); outline: none; 
+}
+#submit-rsvp-btn {
+    width: 100%; padding: 16px; background-color: #A08C69; border-radius: 10px; color: white;
+    font-weight: 600; font-size: 1.3em; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+#submit-rsvp-btn:hover { background-color: #8C785B; transform: translateY(-1px); }
+.success-message { margin-top: 25px; color: #4CAF50; font-weight: 600; display: none; }
+
+
+/* ===================================== */
+/* GUESTBOOK (DAFTAR UCAPAN) STYLING */
+/* ===================================== */
+.guestbook-section { padding: 30px 20px; }
+#guestbook-list {
+    display: flex; flex-direction: column; gap: 15px; margin-top: 20px; text-align: left;
+    max-height: 400px; overflow-y: auto; padding-right: 5px;
+}
+.comment-card {
+    background-color: #f7f7f7; border: 1px solid #eee; padding: 15px; border-radius: 8px;
+}
+.comment-name { font-weight: 600; color: #5D4037; }
+.comment-status { font-size: 0.8em; padding: 3px 8px; border-radius: 12px; color: white; font-weight: 500; margin-left: 10px; }
+.status-hadir { background-color: #4CAF50; }
+.status-tidak-hadir { background-color: #F44336; }
+.status-pengantin { background-color: #A08C69; }
+.comment-message { color: #555; font-size: 0.95em; margin: 0; white-space: pre-wrap; }
+
+
+/* ===================================== */
+/* MUSIK KONTROL (PLAY/PAUSE BUTTON) - FINAL */
+/* ===================================== */
+#music-control {
+    position: fixed; 
+    bottom: 90px; 
+    left: 20px;
+    z-index: 9999; 
+    transition: opacity 0.3s;
+}
+
+#music-control.hidden {
+    display: none; 
+}
+
+#toggle-music-btn {
+    background-color: rgba(139, 0, 0, 0.8); 
+    border: 2px solid #FFD700; 
+    border-radius: 50%; 
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+#music-icon {
+    stroke: white; 
+    width: 22px;
+    height: 22px;
+    fill: none;
+}
+
+
+/* ===================================== */
+/* BOTTOM NAVBAR */
+/* ===================================== */
+#bottom-navbar {
+    position: fixed; bottom: 0; left: 0; width: 100%;
+    background-color: #8B0000; border-top: 2px solid #FFD700; border-bottom: 2px solid #FFD700; 
+    display: flex; justify-content: space-around; padding: 2px 0; 
+    z-index: 999; box-shadow: 0 -2px 10px rgba(0,0,0,0.3);
+}
+.nav-item { flex-grow: 1; text-align: center; }
+.nav-item a {
+    display: flex; flex-direction: column; align-items: center; justify-content: center; 
+    color: #FFD700; font-size: 0.65em; font-weight: 500; padding: 5px 0; height: 100%; 
+    transition: color 0.3s ease;
+}
+.nav-item a svg {
+    margin-bottom: 0; width: 20px; height: 20px; fill: none; stroke: #FFD700; 
+    stroke-width: 1.5; transition: stroke 0.3s ease;
+}
+.nav-item a:hover { color: white; }
+.nav-item a:hover svg { stroke: white; }
+
+
+/* ===================================== */
+/* RESPONSIVE DESIGN */
+/* ===================================== */
+@media (max-width: 600px) {
+    .section { margin: 10px auto; padding: 40px 15px; }
+    .couple-info { flex-direction: column; }
+    .groom, .bride { width: 90%; margin-bottom: 20px; }
+    .ampersand { margin: 15px 0; }
+    .nav-item a { padding: 4px 0; font-size: 0.6em; }
+    .main-content { padding-bottom: 60px; }
+    .time-box { min-width: 65px; padding: 10px 8px; }
+    .time-box span { font-size: 1.8em; }
+    #music-control { bottom: 80px; left: 15px; } 
+}
